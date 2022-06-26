@@ -165,13 +165,13 @@ class Clientes extends Component {
         return (
             <>
                 <h6 className="text-blueGray-800 text-2xl mb-2 font-bold">Cliente</h6>
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-2xl border-indigo-500 rounded-lg bg-white border-0">
+                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-2xl border-blue-500 rounded-lg bg-white border-0">
                     <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                         <form className="w-full py-10" onSubmit={this.eventoFormulario}>
                             <h6 className="text-blueGray-700 text-sm mt-3 mb-6 font-bold ">
                                 Información del cliente
                             </h6>
-                            {this.state.respuesta && <AlertPopper color="indigo" message={this.state.respuesta} />}
+                            {this.state.respuesta && <AlertPopper color="blue" message={this.state.respuesta} />}
                             <div className="flex flex-wrap items-center -mx-3 mb-6">
                                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                     <label
@@ -185,7 +185,6 @@ class Clientes extends Component {
                                         value={this.state.cliente.nombre}
                                         onChange={this.cambiosFormulario}
                                         type="text"
-                                        placeholder="Edwin Perez"
                                     />
                                 </div>
 
@@ -228,7 +227,7 @@ class Clientes extends Component {
                             </div>
                             <button
                                 disabled={!this.state.cliente.nombre || !this.state.cliente.codigoEmpresa}
-                                className="bg-indigo-300 text-white hover:bg-indigo-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
+                                className="bg-blue-300 text-white hover:bg-blue-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
                             >
                                 Crear
                             </button>
@@ -241,7 +240,7 @@ class Clientes extends Component {
                     <div className="w-full px-4">
                         <div
                             className={
-                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-indigo-400 text-white"
+                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blue-400 text-white"
                             }
                         >
                             <div className="rounded-t mb-0 px-4 py-3 border-0">

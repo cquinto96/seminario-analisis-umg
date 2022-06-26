@@ -32,7 +32,7 @@ const Opciones = ({ logout }) => {
         }}
       >
         <div className="items-center flex">
-          <span className="w-12 h-12 text-sm bg-indigo-400 inline-flex items-center justify-center rounded-full">
+          <span className="w-12 h-12 text-sm bg-blue-400 inline-flex items-center justify-center rounded-full">
           <img
               alt="Usuario"
               className="w-full rounded-full align-middle border-none shadow-lg"
@@ -45,7 +45,7 @@ const Opciones = ({ logout }) => {
         ref={popoverDropdownRef}
         className={
           (dropdownPopoverShow ? "block " : "hidden ") +
-          "bg-indigo-400 text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+          "bg-blue-400 text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
         }
       >
         <div className="h-0 my-2" />

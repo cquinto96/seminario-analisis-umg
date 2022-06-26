@@ -13,13 +13,13 @@ class Navegacion extends Component {
   render() {
     return (
       <>
-        <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-indigo-400 flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+        <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-blue-400 flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
           <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
             <button
               className="cursor-pointer text-white md:hidden px-3 py-1 text-xl"
               type="button"
               onClick={() => this.setState({
-                expandir: "bg-indigo-400 m-2 py-3 px-6"
+                expandir: "bg-blue-400 m-2 py-3 px-6"
               })}
             >
               <i className="fas fa-bars"></i>

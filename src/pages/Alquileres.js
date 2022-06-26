@@ -238,7 +238,7 @@ class Alquileres extends Component {
                         this.setState({
                             detalle: [...this.state.detalle, detalleItem]
                         })
-                    }} className='shadow-2xl border-indigo-500 rounded-lg bg-indigo-400 p-4 mb-6' key={i} value={item.codigoMaquina}>{item.nombre}</li>
+                    }} className='shadow-2xl border-blue-500 rounded-lg bg-blue-400 p-4 mb-6' key={i} value={item.codigoMaquina}>{item.nombre}</li>
                 )
             });
     }
@@ -374,7 +374,7 @@ class Alquileres extends Component {
                                         value={this.state.alquiler.fecha}
                                         onChange={this.cambiosFormulario}
                                         type="date"
-                                        placeholder="Edwin Perez"
+                                        
                                     />
                                 </div>
 
@@ -515,7 +515,7 @@ class Alquileres extends Component {
 
                             <button
                                 disabled={!this.state.detalle.length > 0 || !this.state.alquiler.codigoCliente || !this.state.alquiler.fecha}
-                                className="bg-indigo-300 text-white hover:bg-indigo-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
+                                className="bg-blue-300 text-white hover:bg-blue-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
                             >
                                 Crear
                             </button>
@@ -529,7 +529,7 @@ class Alquileres extends Component {
                     <div className="w-full px-4">
                         <div
                             className={
-                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-indigo-400 text-white"
+                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blue-400 text-white"
                             }
                         >
                             <div className="rounded-t mb-0 px-4 py-3 border-0">

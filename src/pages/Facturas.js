@@ -175,7 +175,7 @@ class Facturas extends Component {
                         this.setState({
                             detalle: [...this.state.detalle, detalleItem]
                         })
-                    }} className='shadow-2xl border-indigo-500 rounded-lg bg-indigo-400 p-4 mb-6' key={i} value={item.codigoProducto}>{item.nombre}</li>
+                    }} className='shadow-2xl border-indigo-500 rounded-lg bg-blue-400 p-4 mb-6' key={i} value={item.codigoProducto}>{item.nombre}</li>
                 )
             });
     }
@@ -332,7 +332,7 @@ class Facturas extends Component {
                                         value={this.state.factura.nombre}
                                         onChange={this.cambiosFormulario}
                                         type="text"
-                                        placeholder="Edwin Perez"
+                                     
                                     />
                                 </div>
 
@@ -465,7 +465,7 @@ class Facturas extends Component {
 
                             <button
                                 disabled={!this.state.detalle.length > 0 || !this.state.factura.codigoEmpresa || !this.state.factura.fecha || !this.state.factura.nombre}
-                                className="bg-indigo-300 text-white hover:bg-indigo-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
+                                className="bg-blue-300 text-white hover:bg-blue-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
                             >
                                 Crear
                             </button>
@@ -479,7 +479,7 @@ class Facturas extends Component {
                     <div className="w-full px-4">
                         <div
                             className={
-                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-indigo-400 text-white"
+                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blue-400 text-white"
                             }
                         >
                             <div className="rounded-t mb-0 px-4 py-3 border-0">

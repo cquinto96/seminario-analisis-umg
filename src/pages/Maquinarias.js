@@ -268,7 +268,7 @@ class Maquinarias extends Component {
                             </div>
                             <button
                                 disabled={!this.state.maquinaria.nombre || !this.state.maquinaria.codigoEmpresa || !this.state.maquinaria.tipoMaquinaria}
-                                className="bg-indigo-300 text-white hover:bg-indigo-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
+                                className="bg-blue-300 text-white hover:bg-blue-400 mt-6 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-2xl outline-none"
                             >
                                 Crear
                             </button>
@@ -281,7 +281,7 @@ class Maquinarias extends Component {
                     <div className="w-full px-4">
                         <div
                             className={
-                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-indigo-400 text-white"
+                                "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blue-400 text-white"
                             }
                         >
                             <div className="rounded-t mb-0 px-4 py-3 border-0">

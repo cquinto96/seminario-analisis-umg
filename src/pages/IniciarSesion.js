@@ -133,7 +133,7 @@ class IniciarSesion extends Component {
                                                 <div className="text-center mt-6">
                                                     <button
                                                         disabled={!this.state.usuario.nombre || !this.state.usuario.contrasena}
-                                                        className="bg-indigo-300 text-white hover:bg-indigo-400 text-sm font-bold px-6 py-3 rounded shadow hover:shadow-2xl outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                                                        className="bg-blue-300 text-white hover:bg-blue-400 text-sm font-bold px-6 py-3 rounded shadow hover:shadow-2xl outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                                                     >
                                                         Iniciar sesi&oacute;n
                                                     </button>
