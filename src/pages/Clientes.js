@@ -43,10 +43,12 @@ class Clientes extends Component {
 
     }
 
+    // Evento para eliminar el documento
     async eliminarCliente(info, event) {
         if (info.id !== null) {
             if (info.id.length > 0) {
                 const ref = doc(db, "clientes", info.id)
+                // Metodod para eliminar el documento
                 await deleteDoc(ref);
                 var nuevaLista = this.state.clientes.filter(sucursal => sucursal.id !== info.id);
                 this.setState({
@@ -87,7 +89,9 @@ class Clientes extends Component {
             });
     }
 
+    // Evento para mostrar listado de clientes
     componentDidMount() {
+        // Metodod para mostrar la coleccion de clientes
         getDocs(collection(db, "clientes")).then(response => {
             let listado = [];
             for (const value of response.docs) {
@@ -109,6 +113,8 @@ class Clientes extends Component {
         })
     }
 
+    // Evento que ejecuta la insercion de datos, clientes
+
     async eventoFormulario(event) {
         event.preventDefault();
         this.setState({
@@ -120,6 +126,7 @@ class Clientes extends Component {
                 codigoCliente: uuid()
             }
             var refs = collection(db, "clientes");
+            // Metodo que crea documento de clientes
             var response = await addDoc(refs, cliente);
             if (response && response.id.length > 0) {
                 const valores = {

@@ -20,6 +20,7 @@ class Usuarios extends Component {
     this.eventoFormulario = this.eventoFormulario.bind(this);
   }
 
+  // Function especifica para crear un usuario en el servicio de firebase
   async crearUsuario(email, contrasena) {
     return await createUserWithEmailAndPassword(auth, email, contrasena)
   }
@@ -49,6 +50,7 @@ class Usuarios extends Component {
       }));
   }
 
+  // Crear usuario desde el evento
   async eventoFormulario(event) {
     event.preventDefault();
     this.setState({
@@ -75,9 +77,14 @@ class Usuarios extends Component {
           tipoUsuario: tipoUsuarioChar,
           id,
         }
+        // Metodod que crear el documento
         var response = await addDoc(refs, dataRequest);
         if (response && response.id.length > 0) {
-          var nuevaLista = [...this.state.usuarios, dataRequest];
+          const valores = {
+            id: response.id,
+            info: dataRequest
+          }
+          var nuevaLista = [...this.state.usuarios, valores];
           this.setState({
             usuarios: nuevaLista,
             usuario: {},
@@ -95,6 +102,8 @@ class Usuarios extends Component {
   }
 
   componentDidMount() {
+    // Metodo para obtener la coleccion de datos
+    // GetDocs sirve para obtener los doucmentos de la coleccion *usuarios*
     getDocs(collection(db, "usuarios")).then(response => {
       let listadoUsuarios = [];
       for (const value of response.docs) {
@@ -146,7 +155,6 @@ class Usuarios extends Component {
                     value={this.state.usuario.nombre}
                     onChange={this.cambiosFormulario}
                     type="text"
-                    placeholder="edwin"
                   />
                 </div>
                 <div className="w-full md:w-1/2 px-3">
@@ -160,7 +168,6 @@ class Usuarios extends Component {
                     value={this.state.usuario.contrasena}
                     type="password"
                     onChange={this.cambiosFormulario}
-                    placeholder="******************"
                   />
                 </div>
               </div>
@@ -178,7 +185,6 @@ class Usuarios extends Component {
                     name="direccion"
                     value={this.state.usuario.direccion}
                     onChange={this.cambiosFormulario}
-                    placeholder="Zona 16"
                   />
                   <p className="text-gray-600 text-xs italic">Escriba la Dirección del usuario</p>
                 </div>
@@ -195,7 +201,6 @@ class Usuarios extends Component {
                     name="telefono"
                     value={this.state.usuario.telefono}
                     onChange={this.cambiosFormulario}
-                    placeholder="2885-5420"
                   />
                 </div>
                 <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
