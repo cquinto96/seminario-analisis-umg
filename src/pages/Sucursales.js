@@ -158,13 +158,13 @@ class Sucursales extends Component {
         return (
             <>
                 <h6 className="text-blueGray-800 text-2xl mb-2 font-bold">Sucursal</h6>
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-2xl border-indigo-500 rounded-lg bg-white border-0">
+                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-2xl border-blue-500 rounded-lg bg-white border-0">
                     <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                         <form className="w-full py-10" onSubmit={this.eventoFormulario}>
                             <h6 className="text-blueGray-700 text-sm mt-3 mb-6 font-bold ">
                                 Información de sucursal
                             </h6>
-                            {this.state.respuesta && <AlertPopper color="indigo" message={this.state.respuesta} />}
+                            {this.state.respuesta && <AlertPopper color="blue" message={this.state.respuesta} />}
                             <div className="flex flex-wrap items-center -mx-3 mb-6">
                                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                     <label
