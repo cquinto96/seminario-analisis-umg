@@ -142,16 +142,7 @@ class Navegacion extends Component {
                     Alquiler
                   </Link>
                 </li>
-                <li className="items-center">
-                  <Link
-                    className={
-                      "text-white hover:text-white text-xs  py-3 font-bold block"
-                    }
-                    to="/cotizaciones"
-                  >
-                    Cotizaciones
-                  </Link>
-                </li>
+                
                 <li className="items-center">
                   <Link
                     className={
